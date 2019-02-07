@@ -1,0 +1,10 @@
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.csprojAssemblyReference.cache
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.Properties.Resources.resources
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.csproj.GenerateResource.cache
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.csproj.CoreCompileInputs.cache
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\bin\Debug\TheGoodPicture.exe
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\bin\Debug\TheGoodPicture.pdb
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.exe
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.pdb
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.frmGoodPicture.resources
+c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\bin\Debug\license.txt
