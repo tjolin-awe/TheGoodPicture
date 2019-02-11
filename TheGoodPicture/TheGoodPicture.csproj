@@ -78,5 +78,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GoodPictureLibrary\GoodPictureLibrary.csproj">
+      <Project>{98B8B2B3-F093-4E0B-9374-255D5097A388}</Project>
+      <Name>GoodPictureLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGoodPicture));
             this.tsOilPaint = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.lblFilter = new System.Windows.Forms.ToolStripLabel();
             this.cbFilter = new System.Windows.Forms.ToolStripComboBox();
@@ -41,18 +42,23 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureDemo = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuOilPaintTool = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btnReset = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOilPaintTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEdgeDetectTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsEdgeDetection = new System.Windows.Forms.ToolStrip();
+            this.lblEdgeDetectTitle = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.cbEdgeDetectionFilter = new System.Windows.Forms.ToolStripComboBox();
             this.tsOilPaint.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDemo)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.tsEdgeDetection.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsOilPaint
@@ -74,6 +80,13 @@
             this.tsOilPaint.Size = new System.Drawing.Size(800, 25);
             this.tsOilPaint.TabIndex = 2;
             this.tsOilPaint.Text = "toolStrip1";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(77, 22);
+            this.toolStripLabel2.Text = "OIL PAINTER";
             // 
             // toolStripSeparator1
             // 
@@ -154,6 +167,7 @@
             this.pictureDemo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureDemo.TabIndex = 3;
             this.pictureDemo.TabStop = false;
+            this.pictureDemo.Click += new System.EventHandler(this.pictureDemo_Click_1);
             // 
             // menuStrip1
             // 
@@ -165,24 +179,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuOilPaintTool});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // menuOilPaintTool
-            // 
-            this.menuOilPaintTool.Checked = true;
-            this.menuOilPaintTool.CheckOnClick = true;
-            this.menuOilPaintTool.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.menuOilPaintTool.Name = "menuOilPaintTool";
-            this.menuOilPaintTool.Size = new System.Drawing.Size(180, 22);
-            this.menuOilPaintTool.Text = "Oil Paint Processor..";
-            this.menuOilPaintTool.CheckedChanged += new System.EventHandler(this.menuOilPaintTool_CheckedChanged);
             // 
             // fileToolStripMenuItem
             // 
@@ -199,7 +195,7 @@
             // btnLoad
             // 
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(180, 22);
+            this.btnLoad.Size = new System.Drawing.Size(138, 22);
             this.btnLoad.Text = "Load..";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -207,36 +203,98 @@
             // 
             this.btnSave.Enabled = false;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(180, 22);
+            this.btnSave.Size = new System.Drawing.Size(138, 22);
             this.btnSave.Text = "Save...";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(77, 22);
-            this.toolStripLabel2.Text = "OIL PAINTER";
             // 
             // btnReset
             // 
             this.btnReset.Enabled = false;
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(180, 22);
+            this.btnReset.Size = new System.Drawing.Size(138, 22);
             this.btnReset.Text = "Reset Image";
             this.btnReset.Click += new System.EventHandler(this.tbReset_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(135, 6);
             // 
             // btnExit
             // 
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(180, 22);
+            this.btnExit.Size = new System.Drawing.Size(138, 22);
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuOilPaintTool,
+            this.menuEdgeDetectTool});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // menuOilPaintTool
+            // 
+            this.menuOilPaintTool.Checked = true;
+            this.menuOilPaintTool.CheckOnClick = true;
+            this.menuOilPaintTool.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.menuOilPaintTool.Name = "menuOilPaintTool";
+            this.menuOilPaintTool.Size = new System.Drawing.Size(208, 22);
+            this.menuOilPaintTool.Text = "Oil Paint Processor";
+            this.menuOilPaintTool.CheckedChanged += new System.EventHandler(this.menuOilPaintTool_CheckedChanged);
+            // 
+            // menuEdgeDetectTool
+            // 
+            this.menuEdgeDetectTool.Name = "menuEdgeDetectTool";
+            this.menuEdgeDetectTool.Size = new System.Drawing.Size(208, 22);
+            this.menuEdgeDetectTool.Text = "Edge Detection Processor";
+            this.menuEdgeDetectTool.Click += new System.EventHandler(this.menuEdgeDetectTool_Click);
+            // 
+            // tsEdgeDetection
+            // 
+            this.tsEdgeDetection.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblEdgeDetectTitle,
+            this.toolStripSeparator5,
+            this.cbEdgeDetectionFilter});
+            this.tsEdgeDetection.Location = new System.Drawing.Point(0, 49);
+            this.tsEdgeDetection.Name = "tsEdgeDetection";
+            this.tsEdgeDetection.Size = new System.Drawing.Size(800, 25);
+            this.tsEdgeDetection.TabIndex = 5;
+            this.tsEdgeDetection.Text = "toolStrip1";
+            this.tsEdgeDetection.Visible = false;
+            // 
+            // lblEdgeDetectTitle
+            // 
+            this.lblEdgeDetectTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblEdgeDetectTitle.Name = "lblEdgeDetectTitle";
+            this.lblEdgeDetectTitle.Size = new System.Drawing.Size(104, 22);
+            this.lblEdgeDetectTitle.Text = "EDGE DETECTION";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // cbEdgeDetectionFilter
+            // 
+            this.cbEdgeDetectionFilter.Items.AddRange(new object[] {
+            "Laplacian3x3Filter",
+            "Laplacian3x3GrayScaleFilter",
+            "Laplacian5x5Filter",
+            "Laplacian5x5GrayScaleFilter",
+            "LaplacianOfGaussianFilter",
+            "Laplacian3x3Gaussian3x3",
+            "Sobel3x3Filter",
+            "Prewitt3x3Filter",
+            "Kirsch3x3Filter",
+            "Laplacian3x3OfGaussian5x5Filter_159",
+            "Laplacian3x3OfGaussian5x5Filter_256"});
+            this.cbEdgeDetectionFilter.Name = "cbEdgeDetectionFilter";
+            this.cbEdgeDetectionFilter.Size = new System.Drawing.Size(175, 25);
+            this.cbEdgeDetectionFilter.SelectedIndexChanged += new System.EventHandler(this.cbEdgeDetectionFilter_SelectedIndexChanged);
             // 
             // frmGoodPicture
             // 
@@ -244,6 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureDemo);
+            this.Controls.Add(this.tsEdgeDetection);
             this.Controls.Add(this.tsOilPaint);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -254,6 +313,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureDemo)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tsEdgeDetection.ResumeLayout(false);
+            this.tsEdgeDetection.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,6 +343,11 @@
         private System.Windows.Forms.ToolStripMenuItem btnReset;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
+        private System.Windows.Forms.ToolStrip tsEdgeDetection;
+        private System.Windows.Forms.ToolStripLabel lblEdgeDetectTitle;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripComboBox cbEdgeDetectionFilter;
+        private System.Windows.Forms.ToolStripMenuItem menuEdgeDetectTool;
     }
 }
 

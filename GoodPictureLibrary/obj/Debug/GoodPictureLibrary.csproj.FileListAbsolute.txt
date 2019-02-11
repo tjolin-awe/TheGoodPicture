@@ -1,0 +1,6 @@
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\GoodPictureLibrary\obj\Debug\GoodPictureLibrary.csprojAssemblyReference.cache
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\GoodPictureLibrary\obj\Debug\GoodPictureLibrary.csproj.CoreCompileInputs.cache
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\GoodPictureLibrary\bin\Debug\GoodPictureLibrary.dll
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\GoodPictureLibrary\bin\Debug\GoodPictureLibrary.pdb
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\GoodPictureLibrary\obj\Debug\GoodPictureLibrary.dll
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\GoodPictureLibrary\obj\Debug\GoodPictureLibrary.pdb

@@ -8,3 +8,6 @@ c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\Th
 c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.pdb
 c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.frmGoodPicture.resources
 c:\users\tjolin.autointl\source\repos\TheGoodPicture\TheGoodPicture\bin\Debug\license.txt
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\TheGoodPicture\bin\Debug\GoodPictureLibrary.dll
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\TheGoodPicture\bin\Debug\GoodPictureLibrary.pdb
+C:\Users\tjolin.AUTOINTL\source\repos\TheGoodPicture\TheGoodPicture\obj\Debug\TheGoodPicture.csproj.CopyComplete

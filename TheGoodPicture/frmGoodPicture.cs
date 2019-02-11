@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GoodPictureLibrary;
+using GoodPictureLibrary.Filters;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
@@ -11,7 +13,7 @@ namespace TheGoodPicture
     public partial class frmGoodPicture : Form
     {
 
-        // Based in full on work by Dewald Esterhuizen https://softwarebydefault.com 
+        // Oil Paint based in full on work by Dewald Esterhuizen https://softwarebydefault.com 
       
         #region  Ms-PL License
 
@@ -178,6 +180,9 @@ namespace TheGoodPicture
 
             return resultBitmap;
         }
+
+
+    
 
         private static byte ClipByte(double color)
         {
@@ -385,6 +390,62 @@ namespace TheGoodPicture
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbEdgeDetectionFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ToolStripComboBox combobox = (ToolStripComboBox)sender;
+
+            if (combobox.SelectedIndex == -1)
+                return;
+
+            string edgefilter = combobox.SelectedItem.ToString();
+
+
+            //Type t = Type.GetType("GoodPictureLibrary.Filters." + edgefilter);
+
+            // Filter filter = MatrixFilter.CreateMatrixFilter<Gaussian3x3Filter>();
+
+            Filter filter =  MatrixFilter.CreateMatrixFilter(edgefilter);
+
+            ProcessUsingFilter(filter, true);
+        }
+
+
+        private void ProcessUsingFilter(Filter filter, bool preview)
+        {
+            Bitmap selectedSource = null;
+            Bitmap bitmapResult = null;
+
+            if (preview == true)
+                selectedSource = workingcopy;
+            else
+                selectedSource = original;
+
+
+            if (selectedSource != null)
+                bitmapResult = filter.Process(selectedSource);
+
+
+            if (bitmapResult != null)
+            {
+
+                if (preview)
+                    pictureDemo.Image = bitmapResult;
+                else
+                    result = bitmapResult;
+
+            }
+        }
+
+        private void menuEdgeDetectTool_Click(object sender, EventArgs e)
+        {
+            tsEdgeDetection.Visible = !tsEdgeDetection.Visible;
+        }
+
+        private void pictureDemo_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
