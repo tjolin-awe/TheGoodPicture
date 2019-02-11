@@ -161,9 +161,9 @@
             // pictureDemo
             // 
             this.pictureDemo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureDemo.Location = new System.Drawing.Point(0, 49);
+            this.pictureDemo.Location = new System.Drawing.Point(0, 74);
             this.pictureDemo.Name = "pictureDemo";
-            this.pictureDemo.Size = new System.Drawing.Size(800, 401);
+            this.pictureDemo.Size = new System.Drawing.Size(800, 376);
             this.pictureDemo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureDemo.TabIndex = 3;
             this.pictureDemo.TabStop = false;
@@ -286,7 +286,7 @@
             "Laplacian5x5Filter",
             "Laplacian5x5GrayScaleFilter",
             "LaplacianOfGaussianFilter",
-            "Laplacian3x3Gaussian3x3",
+            "Laplacian3x3Gaussian3x3Filter",
             "Sobel3x3Filter",
             "Prewitt3x3Filter",
             "Kirsch3x3Filter",
